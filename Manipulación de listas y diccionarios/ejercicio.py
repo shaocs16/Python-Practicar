@@ -21,10 +21,12 @@ for user in usuarios:
     if user["edad"] > 30:
         list_user_mayor_30.append(user["nombre"])
 
+list_user_mayor_30 = [user["nombre"] for user in usuarios if user["edad"] > 30]
+
 print("###############")
 print("Ejercicio 1")
 print("###############")
-print(f"Los nombres son {','.join(list_user_mayor_30)}")
+print(f"Los nombres son {', '.join(list_user_mayor_30)}")
 
 ## Ejercico 2
 ## Sumar todas las edades de los usuarios.
@@ -33,8 +35,11 @@ suma = 0
 for edad in usuarios:
     suma += edad["edad"]
 
+## Version optimizado
+sumar_edades = sum(user["edad"] for user in usuarios)
+
 print("###############")
 print("Ejercicio 2")
 print("###############")
-print(f"La edad todad sumada es {suma}")
+print(f"La edad todad sumada es {sumar_edades}")
 
