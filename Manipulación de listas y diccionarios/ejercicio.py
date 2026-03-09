@@ -43,3 +43,32 @@ print("Ejercicio 2")
 print("###############")
 print(f"La edad todad sumada es {sumar_edades}")
 
+## Ejercicio 3
+## Filtrar productos con precio mayor a 100.
+
+filtro = [product for product in productos if product["precio"] > 100]
+
+print("###############")
+print("Ejercicio 3")
+print("###############")
+print(filtro)
+
+## Ejercicio 4
+## Calcular el stock total de todos los productos.
+
+stock_total = sum(product["stock"] for product in productos)
+
+print("###############")
+print("Ejercicio 4")
+print("###############")
+print(stock_total)
+
+## Ejercicio 5
+## Ordenar usuarios por edad descendente.
+
+order_edad = [user["edad"] for user in usuarios]
+
+print("###############")
+print("Ejercicio 5")
+print("###############")
+print(sorted(order_edad,reverse=True))
